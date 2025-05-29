@@ -77,10 +77,98 @@
         </div>
      </div>
 
+     <!-- Game Container-->
+      <div class="game-container hidden" id="game-container">
+        <h1>Whack A Mole 🏆</h1>
+        <div class="game-info">
+            <div class="info-box">
+                <div class="info-box-label">Level</div>
+                <div class="info-box-value" id="level-display">1</div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-label">Score</div>
+                <div class="info-box-value" id="level-display">0</div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-label">Time</div>
+                <div class="info-box-value" id="level-display">60s</div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-label">Target</div>
+                <div class="info-box-value" id="level-display">30</div>
+            </div>
+            <div class="info-box">
+                <div class="info-box-label">High Score</div>
+                <div class="info-box-value" id="level-display">0</div>
+            </div>
+        </div>
+
+        <div class="level-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="levels">
+            <button class="level-btn active" data-level="1">1</button>
+            <button class="level-btn locked" data-level="2" disabled>2</button>
+            <button class="level-btn locked" data-level="3" disabled>3</button>
+            <button class="level-btn locked" data-level="4" disabled>4</button>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="start-btn">Start Game</button>
+            <button class="btn btn-primary" id="pause-btn">Pause Game</button>
+            <button class="btn btn-primary" id="restart-btn">Restart Game</button>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <!-- Holes will be added dyanmically using JavaScript-->
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul class="leadeeboard-list" id="leaderboard">
+                <!--Leaderboard would be added using Javascript-->
+            </ul>
+        </div>
+        
+      </div>
 
 
-
-
+      !-- Game Over Modal -->
+    <div class="modal hidden" id="game-over-modal">
+        <div class="modal__content">
+            <h2 class="modal__title">Game Over!</h2>
+            <div class="score-display">Score: <span id="final-score">0</span></div>
+            <p id="high-score-message"></p>
+            <button class="btn btn--primary" id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    
+    <!-- Level Complete Modal -->
+    <div class="modal hidden" id="level-complete-modal">
+        <div class="modal__content">
+            <h2 class="modal__title">Level Complete! 🎉</h2>
+            <p>You've unlocked Level <span id="next-level">2</span>!</p>
+            <p>Continue playing or start the next level</p>
+            <div class="modal-buttons">
+                <button class="btn btn--primary" id="continue-btn">Continue Playing</button>
+                <button class="btn btn--primary" id="next-level-btn">Next Level</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Champion Modal -->
+    <div class="modal hidden" id="champion-modal">
+        <div class="modal__content">
+            <h2 class="modal__title">🏆 Champion! 🏆</h2>
+            <p>You've aced all levels! You're a true Whack-A-Mole master! 🥳</p>
+            <div class="score-display">Final Score: <span id="champion-score">0</span></div>
+            <p id="champion-high-score"></p>
+            <button class="btn btn--primary" id="champion-play-again-btn">Play Again</button>
+        </div>
+    </div>
 
       <!-- Audio Elements -->
     <audio id="whack-sound" src="./assets/mixkit-impact-of-a-strong-punch-2155.mp3" preload="auto"></audio>
@@ -91,5 +179,7 @@
     <audio id="bomb-sound" src="./assets/mixkit-bomb-explosion-in-battle-2800.wav" preload="auto"></audio>
 
     <script src="./js/loader.js"></script>
+    <script src="./js/levels.js"></script>
+    <script src="./js/whack-a-mole.js"></script>
 </body>
 </html>
