@@ -8,10 +8,76 @@
    
 </head>
 <body>
+    <!-- Loader -->
     <div class="loader flex-center" id="loader">
         <div class="spinner"></div>
         <div class="loading-text">0%</div>
     </div>
+
+    <!-- How to Play Modal -->
+     <div class="modal hidden" id="how-to-play-modal">
+        <div class="modal__content">
+            <div class="modal__title">How to Play</div>
+            <div class="instructions">
+                <div class="instructions__item">
+                    <span class="mole-icon">🐭</span>
+                    <span>Normal Mole: <strong>1 point</strong></span>
+                </div>
+                <div class="instructions__item">
+                    <span class="mole-icon">💰</span>
+                    <span>Golden Mole: <strong>5 point</strong></span>
+                </div>
+                <div class="instructions__item">
+                    <span class="mole-icon">💣</span>
+                    <span>Bomb Mole: <strong>GAMEOVER!</strong></span>
+                </div>
+                <h3 class="keyboard__instructions">Keyboard Controls</h3>
+                <div class="keyboard-map">
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">1</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">2</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">3</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">4</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">5</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">6</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">7</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">8</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+                    <div class="keyboard-map-key">
+                        <div class="keyboard-map-key-number">9</div>
+                        <div class="keyboard-map-position">Top Left</div>
+                    </div>
+
+
+                </div>
+            </div>
+            <button class="btn btn-primary" id="proceed-btn">Proceed to Game</button>
+        </div>
+     </div>
+
+
     <script src="./js/loader.js"></script>
 </body>
 </html>

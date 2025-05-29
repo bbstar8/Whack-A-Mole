@@ -17,6 +17,9 @@ body{
     padding: 20px;
 }
 
+.flex {
+    display: flex;
+}
 .flex-center {
     display: flex;
     align-items: center;
@@ -55,4 +58,122 @@ body{
 @keyframes spin {
     to {transform: rotate(360deg);}
     
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal__content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalAppear 0.3s, ease-out;
+}
+
+@keyframes modalAppear {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+
+.modal__title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.instructions {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.instructions__item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+
+.mole-icon {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.keyboard__instructions{
+    margin: 20px 0 10px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.keyboard-map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.keyboard-map-key {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.keyboard-map-key-number{
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.keyboard-map-position {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
