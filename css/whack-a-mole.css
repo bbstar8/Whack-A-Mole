@@ -6,7 +6,7 @@
     font-family: 'Arial', sans-serif;
 }
 
-body{
+body {
     background-color: #f5f5f5;
     color: #333;
     min-height: 100vh;
@@ -24,6 +24,7 @@ body{
 .flex {
     display: flex;
 }
+
 .flex-center {
     display: flex;
     align-items: center;
@@ -52,19 +53,17 @@ body{
     margin-bottom: 20px;
 }
 
-.loading-text{
-    color: #fff;
+.loading-text {
+    color: white;
     font-size: 24px;
     font-weight: bold;
-
 }
 
 @keyframes spin {
-    to {transform: rotate(360deg);}
-    
+    to { transform: rotate(360deg); }
 }
 
-/* Modal Styling */
+/* Modal Styles */
 .modal {
     position: fixed;
     top: 0;
@@ -80,7 +79,7 @@ body{
 }
 
 .modal__content {
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     padding: 25px;
     max-width: 350px;
@@ -88,7 +87,7 @@ body{
     margin: 20px auto;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: modalAppear 0.3s, ease-out;
+    animation: modalAppear 0.3s ease-out;
 }
 
 @keyframes modalAppear {
@@ -100,7 +99,6 @@ body{
         transform: scale(1);
         opacity: 1;
     }
-    
 }
 
 .modal__title {
@@ -109,6 +107,7 @@ body{
     font-size: 24px;
 }
 
+/* Instructions Styles */
 .instructions {
     text-align: left;
     margin: 20px 0;
@@ -120,7 +119,7 @@ body{
     margin: 10px 0;
     padding: 10px;
     background-color: #f8f9fa;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .mole-icon {
@@ -128,7 +127,7 @@ body{
     font-size: 24px;
 }
 
-.keyboard__instructions{
+.instructions__subtitle {
     margin: 20px 0 10px;
     color: #2c3e50;
     text-align: center;
@@ -141,22 +140,120 @@ body{
     margin: 20px 0;
 }
 
-.keyboard-map-key {
+.keyboard-map__key {
     background-color: #e9ecef;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
 }
 
-.keyboard-map-key-number{
+.keyboard-map__number {
     font-weight: bold;
     font-size: 18px;
-    
+    color: #2c3e50;
 }
 
-.keyboard-map-position {
+.keyboard-map__position {
     font-size: 12px;
     color: #6c757d;
+}
+
+/* Game Container Styles */
+.game-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-container h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Game Info Styles */
+.game-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    min-width: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-box-label {
+    font-size: 12px;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.info-box-value {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+/* Progress Bar Styles */
+.level-progress {
+    width: 100%;
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #28a745;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Levels Styles */
+.levels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.level-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.level-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.level-btn.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Controls Styles */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -168,16 +265,169 @@ body{
     transition: all 0.3s ease;
 }
 
-.btn-primary {
+.btn--primary {
     background-color: #007bff;
-    color: #fff;
+    color: white;
 }
 
-.btn-primary:hover {
+.btn--primary:hover {
     background-color: #0056b3;
 }
 
 .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+/* Game Board Styles */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.hole {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #5E3B1E; 
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3),
+        0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s;
+    border: 2px solid #3A2511; 
+}
+
+.hole::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, 
+        rgba(46, 125, 50, 0.8) 0%, 
+        rgba(46, 125, 50, 0.6) 50%, 
+        transparent 100%);
+    border-radius: 50% 50% 0 0;
+    z-index: 1;
+}
+
+/* Add some grass blades */
+.hole::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: 
+        radial-gradient(circle at 20% 0%, rgba(76, 175, 80, 0.7) 3px, transparent 3px),
+        radial-gradient(circle at 40% 0%, rgba(76, 175, 80, 0.7) 3px, transparent 3px),
+        radial-gradient(circle at 60% 0%, rgba(76, 175, 80, 0.7) 3px, transparent 3px),
+        radial-gradient(circle at 80% 0%, rgba(76, 175, 80, 0.7) 3px, transparent 3px);
+    background-size: 20px 20px;
+    z-index: 2;
+}
+
+.hole:active {
+    transform: scale(0.95);
+}
+
+.mole {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    transition: top 0.3s ease;
+    user-select: none;
+    z-index: 3;
+}
+
+.mole.up {
+    top: 10%;
+}
+
+.mole.golden {
+    color: gold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.mole.bomb {
+    color: #dc3545;
+}
+
+
+/* Score Display Modals */
+.score-display {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.new-high-score {
+    color: #28a745;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .game-board {
+        max-width: 300px;
+    }
+    
+    .mole {
+        font-size: 2rem;
+    }
+    
+    .modal__content {
+        padding: 20px;
+    }
+    
+    .info-box {
+        min-width: 80px;
+        padding: 8px 10px;
+    }
+    
+    .info-box-value {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .game-board {
+        max-width: 280px;
+        gap: 8px;
+    }
+    
+    .mole {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .level-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 }

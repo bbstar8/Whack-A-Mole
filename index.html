@@ -15,9 +15,9 @@
     </div>
 
     <!-- How to Play Modal -->
-     <div class="modal hidden" id="how-to-play-modal">
+    <div class="modal hidden" id="how-to-play-modal">
         <div class="modal__content">
-            <div class="modal__title">How to Play</div>
+            <h2 class="modal__title">How to Play</h2>
             <div class="instructions">
                 <div class="instructions__item">
                     <span class="mole-icon">🐭</span>
@@ -25,118 +25,107 @@
                 </div>
                 <div class="instructions__item">
                     <span class="mole-icon">💰</span>
-                    <span>Golden Mole: <strong>5 point</strong></span>
+                    <span>Golden Mole: <strong>5 points</strong></span>
                 </div>
                 <div class="instructions__item">
                     <span class="mole-icon">💣</span>
                     <span>Bomb Mole: <strong>Game Over!</strong></span>
                 </div>
-                <h3 class="keyboard__instructions">Keyboard Controls</h3>
+                
+                <h3 class="instructions__subtitle">Keyboard Controls</h3>
                 <div class="keyboard-map">
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">1</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">1</div>
+                        <div class="keyboard-map__position">Top Left</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">2</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">2</div>
+                        <div class="keyboard-map__position">Top Center</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">3</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">3</div>
+                        <div class="keyboard-map__position">Top Right</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">4</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">4</div>
+                        <div class="keyboard-map__position">Middle Left</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">5</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">5</div>
+                        <div class="keyboard-map__position">Center</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">6</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">6</div>
+                        <div class="keyboard-map__position">Middle Right</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">7</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">7</div>
+                        <div class="keyboard-map__position">Bottom Left</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">8</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">8</div>
+                        <div class="keyboard-map__position">Bottom Center</div>
                     </div>
-                    <div class="keyboard-map-key">
-                        <div class="keyboard-map-key-number">9</div>
-                        <div class="keyboard-map-position">Top Left</div>
+                    <div class="keyboard-map__key">
+                        <div class="keyboard-map__number">9</div>
+                        <div class="keyboard-map__position">Bottom Right</div>
                     </div>
-
-
                 </div>
             </div>
-            <button class="btn btn-primary" id="proceed-btn">Proceed to Game</button>
+            <button class="btn btn--primary" id="proceed-btn">Proceed to Game</button>
         </div>
-     </div>
+    </div>
 
-     <!-- Game Container-->
-      <div class="game-container hidden" id="game-container">
+    <!-- Game Container -->
+    <div class="game-container hidden" id="game-container">
         <h1>Whack A Mole 🏆</h1>
+        
         <div class="game-info">
             <div class="info-box">
                 <div class="info-box-label">Level</div>
                 <div class="info-box-value" id="level-display">1</div>
             </div>
-
             <div class="info-box">
                 <div class="info-box-label">Score</div>
-                <div class="info-box-value" id="level-display">0</div>
+                <div class="info-box-value" id="score">0</div>
             </div>
-
             <div class="info-box">
                 <div class="info-box-label">Time</div>
-                <div class="info-box-value" id="level-display">60s</div>
+                <div class="info-box-value" id="time">60s</div>
             </div>
             <div class="info-box">
                 <div class="info-box-label">Target</div>
-                <div class="info-box-value" id="level-display">30</div>
+                <div class="info-box-value" id="target">30</div>
             </div>
             <div class="info-box">
                 <div class="info-box-label">High Score</div>
-                <div class="info-box-value" id="level-display">0</div>
+                <div class="info-box-value" id="high-score">0</div>
             </div>
         </div>
-
+        
         <div class="level-progress">
             <div class="progress-bar" id="progress-bar"></div>
         </div>
-
+        
         <div class="levels">
-            <button class="level-btn active" data-level="1">1</button>
-            <button class="level-btn locked" data-level="2" disabled>2</button>
-            <button class="level-btn locked" data-level="3" disabled>3</button>
-            <button class="level-btn locked" data-level="4" disabled>4</button>
-        </div>
-
-        <div class="controls">
-            <button class="btn btn-primary" id="start-btn">Start Game</button>
-            <button class="btn btn-primary" id="pause-btn">Pause Game</button>
-            <button class="btn btn-primary" id="restart-btn">Restart Game</button>
-        </div>
-
-        <div class="game-board" id="game-board">
-            <!-- Holes will be added dyanmically using JavaScript-->
-        </div>
-
-        <div class="leaderboard">
-            <h2>Leaderboard</h2>
-            <ul class="leadeeboard-list" id="leaderboard">
-                <!--Leaderboard would be added using Javascript-->
-            </ul>
+            <button class="level-btn active" data-level="1">Level 1</button>
+            <button class="level-btn locked" data-level="2" disabled>Level 2</button>
+            <button class="level-btn locked" data-level="3" disabled>Level 3</button>
+            <button class="level-btn locked" data-level="4" disabled>Level 4</button>
         </div>
         
-      </div>
-
-
-      !-- Game Over Modal -->
+        <div class="controls">
+            <button class="btn btn--primary" id="start-btn">Start Game</button>
+            <button class="btn btn--primary" id="pause-btn" disabled>Pause</button>
+            <button class="btn btn--primary" id="restart-btn">Restart</button>
+        </div>
+        
+        <div class="game-board" id="game-board">
+            <!-- Holes will be added by JavaScript -->
+        </div>
+    </div>
+    
+    <!-- Game Over Modal -->
     <div class="modal hidden" id="game-over-modal">
         <div class="modal__content">
             <h2 class="modal__title">Game Over!</h2>
@@ -170,7 +159,7 @@
         </div>
     </div>
 
-      <!-- Audio Elements -->
+    <!-- Audio Elements -->
     <audio id="whack-sound" src="./assets/mixkit-impact-of-a-strong-punch-2155.mp3" preload="auto"></audio>
     <audio id="success-sound" src="./assets/mixkit-game-success-alert-2039.wav" preload="auto"></audio>
     <audio id="fail-sound" src="./assets/mixkit-player-losing-or-failing-2042.wav" preload="auto"></audio>
@@ -179,7 +168,6 @@
     <audio id="bomb-sound" src="./assets/mixkit-bomb-explosion-in-battle-2800.wav" preload="auto"></audio>
 
     <script src="./js/loader.js"></script>
-    <script src="./js/levels.js"></script>
     <script src="./js/whack-a-mole.js"></script>
 </body>
 </html>
